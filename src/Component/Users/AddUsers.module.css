@@ -1,0 +1,58 @@
+.image{
+    background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)),url(./backbluered.jpg)no-repeat top/cover;
+}
+
+.form form{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+
+.form label{
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.form input{
+    border-radius: 10px;
+    padding:0.4rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid grey;
+    outline: none;
+}
+
+.form button{
+    cursor: pointer;
+    width: 20%;
+    margin: 0.7rem auto;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 2px solid crimson;
+    color: crimson;
+    font-size: 1.2rem;
+    transition: all 0.7s ease;
+}
+
+.form .customButton:active{
+    transform:scale(0.9);
+}
+
+.form input[type="number"]{
+    width: 20%;
+    text-align: center;
+}
+
+.form input:focus{
+    border: 2px solid grey;
+    background:rgba(128, 128, 128, 0.2);
+}
+
+.form .customButton:hover{
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(122, 122, 122);
+}

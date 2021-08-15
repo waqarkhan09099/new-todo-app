@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import logo from './logo.svg';
+import AddUser from "./Component/Users/AddUsers.js";
+import UserList from './Component/Users/UserList';
+import React, { useState } from 'react';
+// import './App.css';
+// import TodoCon from "./Component/TodoContainer.js";
 function App() {
+  const [userList, setuserList] = useState([]);
+  const [listDisable,setListDisable]=useState(false);
+
+  
+  const addListHandler=(Uname,Uage)=>{
+    setuserList((prevdata)=>{
+      return [...prevdata,{name:Uname,age:Uage,id:Math.random()}];
+      
+    });
+    return setListDisable(true);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AddUser onAddUser={addListHandler}></AddUser>
+      {listDisable&&<UserList User={userList} deleteData={userList}/>}
     </div>
   );
 }

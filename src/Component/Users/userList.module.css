@@ -1,0 +1,48 @@
+.userList{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 90%;
+    align-items: center;
+    padding: 0;
+    /* background: chartreuse; */
+    margin: 0 auto;
+}
+
+.userList li{
+    display: flex;
+    font-size: 1.2rem;
+    border-radius:10px ;
+    color: white;
+    margin: 0.5rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+    background: crimson;
+}
+
+.image{
+    background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)),url(./backbluered.jpg)no-repeat top/cover;
+}
+
+.userList li .btn:active{
+    transform:scale(0.9);
+}
+
+.userList li .btn{
+    cursor: pointer;
+    width:10%;
+    padding: 3px  6px;
+    border-radius: 10px;
+    border: 2px solid crimson;
+    color: crimson;
+    font-size: inherit;
+    transition: all 0.7s ease;
+}
+
+.userList li .btn:hover{
+    color: white;
+    background: crimson;
+    border: 2px solid rgb(122, 122, 122);
+}
