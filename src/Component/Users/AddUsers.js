@@ -5,7 +5,7 @@ import ErrorModel from "./ErrorModel";
 import Button from "../UI/Button";
 
 const AddUsers = props => {
-    const anotherInputRef=useRef();
+    // const anotherInputRef=useRef();
     const [userName, setUserName] = useState('');
     const [userAge, setUserAge] = useState();
     const [errorModule, setErrorModule] = useState();
@@ -94,7 +94,7 @@ const AddUsers = props => {
                     <label htmlFor="age" >Age (years):</label>
                     <input id="age" type="number" style={{ border: `${(+userAge <= 5 || userAge === undefined ? '2px solid red' : '2px solid green')}` }} value={userAge} min="0" max="99" onChange={userAgeHandler} />
                     <Button type="submit" class={classes.customButton}>Add List</Button>
-                    <input type="text" ref={anotherInputRef} />
+                    {/* <input type="text" ref={anotherInputRef} /> */}
                 </form>
             </Card>
         </div>
