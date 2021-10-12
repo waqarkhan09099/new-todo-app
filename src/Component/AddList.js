@@ -14,7 +14,7 @@ const List = styled.div`
     width:700px;
     & p{
         flex-wrap:wrap;
-        width:90%
+        width:90%;
         overflow:auto;
     }
 

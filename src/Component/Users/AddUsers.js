@@ -5,17 +5,16 @@ import ErrorModel from "./ErrorModel";
 import Button from "../UI/Button";
 
 const AddUsers = props => {
-    // const anotherInputRef=useRef();
+    const inputRef=useRef();
     const [userName, setUserName] = useState('');
     const [userAge, setUserAge] = useState();
     const [errorModule, setErrorModule] = useState();
-    const refinput=useRef();
+    
 
     useEffect(()=>{
         const identifier=setTimeout(()=>{
             console.log("enter Date")
 
-            return (userName.trim().length>=3&&+userAge.length>3?true:"")
         },2000);
         
         return()=>{
@@ -40,6 +39,7 @@ const AddUsers = props => {
 
 
     
+
     const submitHandler = (e) => {
         e.preventDefault();
         // return{
@@ -50,7 +50,8 @@ const AddUsers = props => {
                 title: "Empty Field Error",
                 error: "Plz fill required data"
             })
-            return;
+            
+            return ;
         }
         if (+userAge <= 5) {
             // return alert("your not Eligible your age is less then 5");
@@ -67,7 +68,7 @@ const AddUsers = props => {
                 title: "Invalid User Name",
                 error: "Enter atleast 4 Character "
             });
-            return;
+            return ;
         }
         props.onAddUser(userName, userAge);
         setUserName('');
@@ -90,9 +91,9 @@ const AddUsers = props => {
                 <form onSubmit={submitHandler} >
 
                     <label htmlFor="userName">Username :</label>
-                    <input id="userName" value={userName}  style={{ border: `${(userName.trim().length <= 3 ? '2px solid red' : '2px solid green')}` }} type="text" onChange={userHandler} />
+                    <input id="userName" value={userName} ref={inputRef}  style={{ border: `${(userName.trim().length <= 3 ? '2px solid red' : '2px solid green')}` }} type="text" onChange={userHandler} />
                     <label htmlFor="age" >Age (years):</label>
-                    <input id="age" type="number" style={{ border: `${(+userAge <= 5 || userAge === undefined ? '2px solid red' : '2px solid green')}` }} value={userAge} min="0" max="99" onChange={userAgeHandler} />
+                    <input id="age" type="number"  style={{ border: `${(+userAge <= 5 || userAge === undefined ? '2px solid red' : '2px solid green')}` }} value={userAge} min="0" max="99" onChange={userAgeHandler} />
                     <Button type="submit" class={classes.customButton}>Add List</Button>
                     {/* <input type="text" ref={anotherInputRef} /> */}
                 </form>

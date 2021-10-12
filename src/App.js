@@ -8,7 +8,9 @@ function App() {
   const [userList, setuserList] = useState([]);
   const [listDisable,setListDisable]=useState(false);
 
-  
+  const deleteFunc=()=>{
+    userList.filter(data=>data.id!==data.id)
+  }
   const addListHandler=(Uname,Uage)=>{
     setuserList((prevdata)=>{
       return [...prevdata,{name:Uname,age:Uage,id:Math.random()}];
@@ -19,7 +21,7 @@ function App() {
   return (
     <div>
       <AddUser onAddUser={addListHandler}></AddUser>
-      {listDisable&&<UserList User={userList} deleteData={userList}/>}
+      {listDisable&&<UserList User={userList} onDeletehandler={deleteFunc}/>}
     </div>
   );
 }
