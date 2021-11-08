@@ -8,12 +8,13 @@ function App() {
   const [userList, setuserList] = useState([]);
   const [listDisable,setListDisable]=useState(false);
 
-  const deleteFunc=()=>{
-    userList.filter(data=>data.id!==data.id)
+  const deleteFunc=(userid)=>{
+
+    userList.filter(data=> data.id===userid)
   }
   const addListHandler=(Uname,Uage)=>{
     setuserList((prevdata)=>{
-      return [...prevdata,{name:Uname,age:Uage,id:Math.random()}];
+      return [...prevdata,{name:Uname,age:Uage,id:Number(userList.length+1)}];
       
     });
     return setListDisable(true);

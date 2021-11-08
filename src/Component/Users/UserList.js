@@ -9,7 +9,7 @@ const UserList = (props) => {
         <Card background={style.image}>
             <ul className={style.userList}>
                 {props.User.map(data => {
-                    return (<li key={data.id}>Hello {data.name} your Age is {data.age}<Deletebtn class={style.btn}  clickHandler={props.onDeletehandler}>X</Deletebtn></li>)
+                    return (<li key={data.id}>Hello {data.name} your Age is {data.age}<Deletebtn class={style.btn}  clickHandler={props.onDeletehandler(data.id)}>X</Deletebtn></li>)
                 })}
             </ul>
         </Card>
