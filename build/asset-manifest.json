@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/new-todo-app/static/css/main.edebcfd9.chunk.css",
+    "main.js": "/new-todo-app/static/js/main.1ffa81a3.chunk.js",
+    "main.js.map": "/new-todo-app/static/js/main.1ffa81a3.chunk.js.map",
+    "runtime-main.js": "/new-todo-app/static/js/runtime-main.c90e2098.js",
+    "runtime-main.js.map": "/new-todo-app/static/js/runtime-main.c90e2098.js.map",
+    "static/js/2.b5ed2906.chunk.js": "/new-todo-app/static/js/2.b5ed2906.chunk.js",
+    "static/js/2.b5ed2906.chunk.js.map": "/new-todo-app/static/js/2.b5ed2906.chunk.js.map",
+    "static/js/3.a05dc769.chunk.js": "/new-todo-app/static/js/3.a05dc769.chunk.js",
+    "static/js/3.a05dc769.chunk.js.map": "/new-todo-app/static/js/3.a05dc769.chunk.js.map",
+    "index.html": "/new-todo-app/index.html",
+    "static/css/main.edebcfd9.chunk.css.map": "/new-todo-app/static/css/main.edebcfd9.chunk.css.map",
+    "static/js/2.b5ed2906.chunk.js.LICENSE.txt": "/new-todo-app/static/js/2.b5ed2906.chunk.js.LICENSE.txt",
+    "static/media/userList.module.css": "/new-todo-app/static/media/backbluered.f1337fd4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c90e2098.js",
+    "static/js/2.b5ed2906.chunk.js",
+    "static/css/main.edebcfd9.chunk.css",
+    "static/js/main.1ffa81a3.chunk.js"
+  ]
+}
